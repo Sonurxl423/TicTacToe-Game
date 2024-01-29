@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Ubuntu:ital,wght@1,300;1,400&family=Varela+Round&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav
+{
+    background-color: black;
+    color: white;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    height: 65px;
+    padding: 0px 15px;
+    font-family: 'Varela Round', sans-serif;
+    
+}
+nav ul li
+{
+    list-style: none;
+}
+
+.gameContainer
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Varela Round', sans-serif;
+    position: relative;
+}
+.line
+{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    transition: width 1s ease-in-out;
+    position:absolute;
+}
+
+.box
+{
+    /* background-color: rgb(143, 218, 193); */
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* .box:hover
+{
+    background-color: rgb(207, 250, 250);
+} */
+.box:visited
+{
+    background-color: rgb(187, 108, 18);
+}
+.gameInfo
+{
+    padding: 5vw 0vw;
+    margin: 0vw 5vw;
+}
+
+.gameInfo div
+{
+    padding-top: 4vw;
+}
+.imgbox img
+{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.info
+{
+    padding: 4vw;
+    font-size: 25px;
+    
+}
+
+.bt-0
+{
+    border-top: 0;
+}
+.br-0
+{
+    border-right: 0;
+}
+.bb-0
+{
+    border-bottom: 0;
+}
+.bl-0
+{
+    border-left: 0;
+}
+
+#reset
+{
+    cursor: pointer;
+    margin: 0px 23px;
+    padding: 6px 14px;
+    background-color: rgb(9, 145, 38);
+    border-radius: 6px;
+    border: 2px solid black;
+}
+
+
+@media screen and (max-width:800px) {
+    .gameContainer
+    {
+        flex-wrap: wrap;
+    }
+    .gameInfo
+    {
+        margin-top: 34px;
+    }
+
+    .gameInfo h1
+    {
+        font-size: 2.5rem;
+    }
+    .container
+    {
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+
+    }
+    
+}
+@media screen and (max-width:600px){
+    .gameInfo h1
+    {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:350px){
+    .gameInfo h1
+    {
+        font-size: 1,3rem;
+    }
+}
